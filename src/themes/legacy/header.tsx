@@ -3,7 +3,7 @@ import MainMenu from "./mainMenu";
 
 export default function HeaderLegacy() {
   return (
-    <div>
+    <div className="">
       <MainMenu/>
     </div>
   )

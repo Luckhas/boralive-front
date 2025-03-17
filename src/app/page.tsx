@@ -2,7 +2,7 @@ import HeaderLegacy from "@/themes/legacy/header";
 
 export default function Home() {
   return (
-    <div>
+    <div className="">
       <HeaderLegacy/>
     </div>
   );
