@@ -1,4 +1,4 @@
-import Carousel from "./carousel/carousel";
+import Carousel from "./components/carousel/carousel";
 import MainMenu from "./mainMenu";
 
 

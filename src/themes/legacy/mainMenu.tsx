@@ -1,13 +1,10 @@
 'use client'
 import axios from 'axios';
-import { headers } from 'next/headers';
 import { useEffect, useState } from 'react'
 import styled from 'styled-components'
 const Menu = styled.div`
   // font-family: "Exo"
 `
-
-
 export default function MainMenu() {
 
   const [userData, setUserData] = useState(Object);
@@ -25,26 +22,25 @@ export default function MainMenu() {
         setUserData(response.data)
         console.log(response.data)
       } catch (error) {
-        console.log("O erro éa: ", error)
+        // console.log("O erro éa: ", error)
       }
     }
     fetchUserData();
   }, [])
 
-  
-
   return (
 
     <Menu className="bg-bl-dark-purple">
-      <nav id="mainMenu" className="flex max-w-6xl mx-auto items-center justify-between py-5">
+      <nav id="mainMenu" className="flex container mx-auto items-center justify-between py-5">
         <div className="">
           <img src="/assets/images/logo-bora-live.webp" alt="Logo Bora Live" className="h-8" />
         </div>
         <div className="text-white flex uppercase tracking-widest text-sm">
           <div className="px-5 py-2"><a href="">Home</a></div>
-          <div className="px-5 py-2"><a href="">Sobre</a></div>
+          {/* <div className="px-5 py-2"><a href="">Sobre</a></div> */}
           <div className="px-5 py-2"><a href="">Aulas</a></div>
           <div className="px-5 py-2"><a href="">Downloads</a></div>
+          <div className="px-5 py-2"><a href="">Shop</a></div>
           <div className="px-5 py-2">{userData.id !== undefined ? <a href={"/minha-conta/" + userData.id}>Minha Conta</a> : <a href="/login">Login</a>}</div>
         </div>
         <div className="bg-gray-500">

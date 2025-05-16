@@ -30,7 +30,8 @@ export default function LoginPage() {
       if (response.status === 200) {
         localStorage.setItem("token", data.accessToken);
         // alert(data.token)
-        router.push("/?"+data.accessToken);
+        router.push("/");
+        // router.push("/?"+data.accessToken);
         // console.log(data.accessToken)
       } else {
         alert("Erro no login: " + data.message);

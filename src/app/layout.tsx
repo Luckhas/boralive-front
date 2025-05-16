@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import StyledComponentsRegistry from "@/lib/registry";
-import { Ubuntu, Ubuntu_Sans } from "next/font/google";
+import { Ubuntu, Ubuntu_Sans, Open_Sans } from "next/font/google";
 
 const ubuntu = Ubuntu({
   subsets: ['latin'],
@@ -12,6 +12,12 @@ const ubuntu = Ubuntu({
 const ubuntuSans = Ubuntu_Sans({
   subsets: ['latin'],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+  style: ['italic', "normal"]
+});
+
+const openSan = Open_Sans({
+  subsets: ['latin'],
+  weight: ["300", "400", "500", "600", "700", "800"],
   style: ['italic', "normal"]
 });
 

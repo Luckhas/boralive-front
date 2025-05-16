@@ -25,9 +25,9 @@ export default function Carousel() {
     fetchPost()
   }, [])
 
-  useEffect(() => {
-    console.log(posts)
-  }, [posts])
+  // useEffect(() => {
+  //   console.log(posts)
+  // }, [posts])
 
   return (
     <Swiper
@@ -41,7 +41,7 @@ export default function Carousel() {
       {posts.map((posts) => (
         <SwiperSlide key={posts.title}>
           <div className="h-[500px] flex items-end justify-center bg-[url(https://picsum.photos/1280/720)] bg-cover bg-center">
-            <a href="#" className="inline-block max-w-[30%] bg-white hover:bg-[#dfa927] text-[#dfa927] hover:text-white transition-all ease-in-out duration-700 rounded-xl mb-[70px] p-5" style={{fontFamily: 'Cal Sans'}}>{posts.title}</a>
+            <a href="#" className="inline-block max-w-[30%] bg-white hover:bg-primary text-primary hover:text-white transition ease-in-out duration-500 rounded-xl mb-[70px] p-5" style={{fontFamily: 'Cal Sans'}}>{posts.title}</a>
           </div>
         </SwiperSlide>
       ))}

@@ -1,6 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-bl-dark-purple: #0f0e23;
+  --color-primary: #e19826;
+  --color-grape: #6a0dad;
+  --color-blue-violet: #7f3fbf;
+  --color-purpureus: #8e44ad;
+  --color-indigo-dye: #145374;
+  --color-persian-green: rgb(44, 156, 145);
+}
 
 @font-face {
   font-family: 'Cal Sans';
@@ -11,5 +19,5 @@
 }
 
 body {
-  font-family: 'Ubunto', Helvetica, sans-serif;
+  font-family: 'Open Sans', Helvetica, sans-serif;
 }
