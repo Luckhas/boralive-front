@@ -7,7 +7,9 @@
   --color-blue-violet: #7f3fbf;
   --color-purpureus: #8e44ad;
   --color-indigo-dye: #145374;
-  --color-persian-green: rgb(44, 156, 145);
+  --color-persian: rgb(44, 156, 145);
+  --font-ubunto: 'Ubunto', Helvetica, sans-serif;
+  --font-calc: 'Cal Sans', sans-serif;;
 }
 
 @font-face {

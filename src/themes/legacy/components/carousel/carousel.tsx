@@ -21,15 +21,17 @@ export default function Carousel() {
         console.log("O erro é: ", error)
       }
     }
-
     fetchPost()
   }, [])
 
-  // useEffect(() => {
-  //   console.log(posts)
-  // }, [posts])
+  function newBGUrl(): string {
+    const width = Math.floor(Math.random() * (2000 - 1000 + 1) + 1000);
+    const height = Math.floor(Math.random() * (1500 - 720 + 1) + 720);
+    return "https://picsum.photos/" + width + "/" + height;
+  }
 
   return (
+    
     <Swiper
       modules={[Navigation, Pagination, Autoplay]}
       slidesPerView={1}
@@ -38,14 +40,14 @@ export default function Carousel() {
       // autoplay={{ delay: 10000 }}
       className="bg-red-300"
     >
-      {posts.map((posts) => (
+      {posts.map((posts, index) => (
         <SwiperSlide key={posts.title}>
-          <div className="h-[500px] flex items-end justify-center bg-[url(https://picsum.photos/1280/720)] bg-cover bg-center">
+          {/* <div className={`h-[500px] flex items-end justify-center bg-[${newBGUrl()}] bg-cover bg-center`} style={{backgroundImage: `url(${newBGUrl})`}}> */}
+          <div className={`h-[500px] flex items-end justify-center bg-cover bg-center`} style={{backgroundImage: `url(${newBGUrl()})`}}>
             <a href="#" className="inline-block max-w-[30%] bg-white hover:bg-primary text-primary hover:text-white transition ease-in-out duration-500 rounded-xl mb-[70px] p-5" style={{fontFamily: 'Cal Sans'}}>{posts.title}</a>
           </div>
         </SwiperSlide>
       ))}
-
     </Swiper>
   )
 }

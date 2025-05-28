@@ -79,7 +79,7 @@ export default function PopularArticles() {
             {mostPopularPosts.slice(1, 4).map((posts) => {
               return (
                 <div key={posts.id + posts.views} className="my-2 py-2 border-b border-gray-200">
-                  <h5 className="w-[30ch] truncate hover:text-primary transition transition-discrete"><Link href={"/" + friendlyUrl(posts.title)}>{posts.title.replace((/\./g), "")}</Link></h5>
+                  <h5 className="w-[30ch] truncate hover:text-primary transition duration-300"><Link href={"/" + friendlyUrl(posts.title)}>{posts.title.replace((/\./g), "")}</Link></h5>
                   <div className="text-sm text-gray-600">
                     <div className="inline-block mr-3">{criarData()}</div>
                     <div className="inline-block mr-3"><FontAwesomeIcon icon={faEye} /> {posts.views}</div>

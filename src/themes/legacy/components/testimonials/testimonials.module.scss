@@ -1,0 +1,25 @@
+/* .swiper {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+} */
+.testiomonialSwiper {
+  .swiperSlide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  :global(.swiper-pagination) {
+    // background-color: aqua;
+    position: initial;
+  }
+  :global(.swiper-pagination-bullet) {
+    width: 6px;
+    height: 6px;
+  }
+  :global(.swiper-pagination-bullet-active) {
+    background-color: var(--color-bl-dark-purple);
+  }
+}

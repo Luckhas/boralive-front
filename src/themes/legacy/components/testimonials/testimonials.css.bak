@@ -1,0 +1,16 @@
+/* .swiper {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+} */
+#testiomonials-swiper .swiperSlide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#testiomonials-swiper .swiper-pagination {
+  background-color: aqua;
+  position: initial;
+}
